@@ -1,0 +1,90 @@
+.bloque1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+  
+ 
+ .house {
+  cursor: pointer;
+}
+
+.house:hover .Title {
+  color: #eb5757;
+}
+
+.imagen {
+  max-width: 100%;
+  height: 238px;
+  width: 395px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-radius: 24px;
+}
+
+.imagen img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.house {
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.detalles {
+    width: 350px;
+  display: flex;
+  flex-direction: row;
+  align-items:baseline;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  padding-top:15px;
+  
+  
+}
+
+.superHost {
+  font-size: 12px;
+  line-height: 15px;
+  color: #4f4f4f;
+  font-weight: 700;
+  border: 1px solid #4f4f4f;
+  border-radius: 12px;
+  align-items: center;
+  display: flex;
+  padding: 7px 9px;
+}
+
+.Type {
+  color: #828282;
+  line-height: 17px;
+}
+
+.homeStars {
+  display: flex;
+  align-items: center;
+  line-height: 17px;
+  color: #4f4f4f;
+}
+
+.Title {
+  all: unset;
+}
+
+.Title {
+  color: #333;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+@media (min-width: 500px) {
+  .homeImg {
+    height: 269px;
+  }
+}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-
+import Home from "./home/Home";
 function App() {
   // La variable data es la que va a almacenar los datos de "stays.json" y setData nos ayudará a guardar esos datos en esa variable. Es necesario que inicialicemos esa variable como un array vacío para evitar errores.
   const [data, setData] = useState([]);
@@ -20,16 +20,28 @@ function App() {
 
   // Este Hook te va a ejecutar la función getData cada vez que la página se renderice.
   useEffect(() => {
-     getData();
+    getData();
   }, []);
 
   // Puedes ver la variable data en consola.
   console.log(data);
   return (
     <>
-    {/* Aquí te dejo un ejemplo de cómo podrías imprimir varios elementos a la vez. */}
-      {data.map((el, i) => {
-        return <h1 key={i}>{el.city}</h1>;
+      {data.map((el) => {
+        return (
+          <>
+            <div className="house">
+              <Home
+                imagen={el.photo}
+                //city={el.city}
+                type={el.type}
+                title={el.title}
+                rating={el.rating}
+                superHost={el.superHost}
+              />
+            </div>
+          </>
+        );
       })}
     </>
   );
