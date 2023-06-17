@@ -24,27 +24,33 @@ function App() {
   }, []);
 
   // Puedes ver la variable data en consola.
+  
   console.log(data);
+  
   return (
-    <>
+    
+   <>
       {data.map((el) => {
         return (
           <>
+          <div className="general">
             <div className="house">
               <Home
                 imagen={el.photo}
-                //city={el.city}
                 type={el.type}
                 title={el.title}
                 rating={el.rating}
                 superHost={el.superHost}
               />
             </div>
+            </div>
           </>
         );
       })}
     </>
   );
+  
 }
 
 export default App;
+
