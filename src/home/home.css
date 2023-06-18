@@ -1,11 +1,17 @@
-#root {
+.homegrid{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  row-gap: 35px;
-}
+  row-gap:2px;
 
+}
+.Stays{
+  font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333333;
+}
 .house {
   cursor: pointer;
 }
@@ -41,8 +47,8 @@
   flex-direction: row;
   align-items: baseline;
   justify-content: space-between;
-  padding-bottom: 18px;
-  padding-top: 15px;
+  padding-bottom: 12px;
+  padding-top: 18px;
 }
 
 .superHost {
@@ -89,7 +95,8 @@
   font-weight: 500;
   line-height: 17px;
   letter-spacing: 0em;
-  text-align: left;
+  display: flex;
+  align-items: center;
 }
 .Title {
   color: #333;
@@ -97,9 +104,66 @@
   line-height: 20px;
   font-weight: bold;
 }
-
+/*
 @media (min-width: 500px) {
   .homeImg {
     height: 269px;
   }
 }
+/*
+<Home
+                imagen={el.photo}
+                type={el.type}
+                title={el.title}
+                rating={el.rating}F
+                superHost={el.superHost}
+
+
+
+import { useEffect, useState } from "react";
+import "./App.css";
+import Home from "./home/Home";
+import Nav from './nav/Nav'
+
+function App() {
+  const [data, setData] = useState([]);
+
+  const getData = async () => {
+    try {
+      const res = await fetch("stays.json");
+      const resJson = await res.json();
+      setData(resJson);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  console.log(data);
+
+  return (
+    <>
+      <div className="nav-container">
+        <Nav />
+      </div>
+
+      <div className="stays-container">
+        <h1 className="Stays">Stays in Finland</h1>
+
+        <div className="homegrid">
+          {data.map((el, i) => (
+            <div className="house" key={i}>
+              <Home {...el} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default App;
+                */

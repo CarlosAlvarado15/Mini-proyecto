@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Home from "./home/Home";
+import Nav from './nav/Nav'
 function App() {
   // La variable data es la que va a almacenar los datos de "stays.json" y setData nos ayudará a guardar esos datos en esa variable. Es necesario que inicialicemos esa variable como un array vacío para evitar errores.
   const [data, setData] = useState([]);
@@ -30,27 +31,22 @@ function App() {
   return (
     
    <>
-      {data.map((el) => {
-        return (
-          <>
-          <div className="general">
-            <div className="house">
-              <Home
-                imagen={el.photo}
-                type={el.type}
-                title={el.title}
-                rating={el.rating}
-                superHost={el.superHost}
-              />
+            <Nav/>
+            <div className="Stays"> 
+            <h1>Stays in Findland</h1>
             </div>
+
+
+
+            <div className="homegrid">
+          {data.map((el, i) => (
+            <div className="house" key={i}>
+              <Home {...el} />
             </div>
-          </>
-        );
-      })}
-    </>
+          ))}
+        </div>
+      </>
   );
-  
 }
 
 export default App;
-
