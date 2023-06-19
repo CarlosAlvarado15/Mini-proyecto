@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Home from "./home/Home";
 import Nav from './nav/Nav'
+import Logo from "./logo";
+
+
 function App() {
   // La variable data es la que va a almacenar los datos de "stays.json" y setData nos ayudará a guardar esos datos en esa variable. Es necesario que inicialicemos esa variable como un array vacío para evitar errores.
   const [data, setData] = useState([]);
@@ -31,15 +34,12 @@ function App() {
   return (
     
    <>
-   
+            <Logo/>
             <Nav/>
             
             <div className="Stays"> 
             <h1>Stays in Findland</h1>
             </div>
-
-
-
             <div className="homegrid">
           {data.map((el, i) => (
             <div className="house" key={i}>

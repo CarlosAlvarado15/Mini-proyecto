@@ -11,15 +11,24 @@
 
 
 
-#App{
-min-height: 100vh;
-}
+
 
 #contenedor{
-height: 40vh;
+
 display: flex;
-justify-content: center;
-align-items: center;
+justify-content:flex-start;
+align-items: flex-start;
+align-content: flex-start;
+
+position: fixed;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+transform: scale(1);
+top: 0;
+z-index: 10;
+       
+
 
 }
 #contenedor-centrado{
@@ -28,6 +37,7 @@ align-items: center;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #F2F2F2;
     
     
 }
@@ -52,6 +62,7 @@ nav > div {
 nav>div:first-child{
    
     padding: 20px 30px;
+    
   
 }
 nav>div:first-child>p{
@@ -59,6 +70,7 @@ nav>div:first-child>p{
     top: 10px;
     font-weight: 800;
     font-size: 9px;
+
 }
 nav>div:first-child>input{
  width: 100%;
@@ -116,7 +128,7 @@ nav > div:last-child>button{
 
 #div-toggles>div {
     width: 33%;
-    background-color: aqua;
+   
 }
 
 #toggle1{
