@@ -1,0 +1,95 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+   font-family:'Mulish'sans-serif
+  
+}
+
+
+
+#App{
+min-height: 100vh;
+}
+
+#contenedor{
+height: 40vh;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+#contenedor-centrado{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    
+}
+
+nav{
+    width: 90%;
+    height: 70px;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+border-radius: 16px; 
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: relative;
+
+border-radius: 16px;
+}
+nav > div { 
+    width: 33%;
+}
+
+nav>div:first-child{
+   
+    padding: 20px 30px;
+  
+}
+nav>div:first-child>p{
+    position: absolute;
+    top: 10px;
+    font-weight: 800;
+    font-size: 9px;
+}
+nav>div:first-child>input{
+ width: 100%;
+ 
+ outline: 0;
+ border: 0;
+ font-size: 1rem;
+}
+nav > div:nth-child(2){
+   
+    padding: 20px 30px;
+  
+}
+nav > div:nth-child(2) > p{
+    position: absolute;
+    top: 10px;
+    font-weight: 800;
+    font-size: 9px;
+}
+nav > div:nth-child(2) >input{
+    width: 100%;
+ 
+    outline: 0;
+    border: 0;
+    font-size: 1rem; 
+}
+
+nav > div:not(:last-child){
+border-right:  1px solid #F2F2F2;
+}
+
+nav > div:last-child>button{
+background-color: #EB5757;
+border: 0px;
+padding: 0.5rem;
+border-radius: 10px;
+color: white;
+}

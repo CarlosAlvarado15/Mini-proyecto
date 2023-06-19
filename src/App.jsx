@@ -31,7 +31,9 @@ function App() {
   return (
     
    <>
+   
             <Nav/>
+            
             <div className="Stays"> 
             <h1>Stays in Findland</h1>
             </div>
